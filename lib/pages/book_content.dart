@@ -18,17 +18,6 @@ class BookContentPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Gambar dari URL
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                book.imageUrl ?? 'https://via.placeholder.com/300x200.png?text=No+Image',
-                width: double.infinity,
-                height: 200,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => const Text('Failed to load image'),
-              ),
-            ),
             const SizedBox(height: 16),
             Text(
               book.author,
